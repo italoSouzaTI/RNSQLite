@@ -5,7 +5,6 @@ import { StyleSheet, Text, View, TextInput, Pressable, Alert } from "react-nativ
 import * as Sharing from "expo-sharing";
 import * as FileSystem from "expo-file-system";
 import * as SQLite from "expo-sqlite";
-import { Asset } from "expo-asset";
 
 const DBNAME = "lista.db";
 export default function App() {
@@ -80,6 +79,7 @@ export default function App() {
     useEffect(() => {
         openDatabase();
         selectAll();
+        // verificando caminho que está sendo salvo
         const fileSystemPath = async () => {
             console.log(FileSystem.documentDirectory);
         };
